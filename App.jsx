@@ -1,4 +1,8 @@
 import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
+import {
   Text,
   View,
   SafeAreaView,
@@ -6,25 +10,19 @@ import {
   TouchableOpacity,
   Button,
   Alert,
+  StatusBar,
+  Dimensions,
 } from "react-native";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeSreen from "./app/screens/WelcomeSreen";
+
 import { styles } from "./AppCss";
 
 export default function App() {
   return (
-    <SafeAreaView style={[styles.container, { backgroundColor: "pink" }]}>
-      <Button
-        color="orange"
-        title="Click me"
-        onPress={
-          () =>
-            Alert.alert("My Title", "My message", [
-              { text: "Yes", onPress: () => console.log("Y") },
-              { text: "No", onPress: () => console.log("N") },
-            ])
-          // Only works in IOS
-          // Alert.prompt("My Title", "My message", (text) => console.log(text))
-        }
-      />
+    <SafeAreaView style={[styles.container]}>
+      <StatusBar backgroundColor="orange" />
+      <WelcomeSreen />
     </SafeAreaView>
   );
 }

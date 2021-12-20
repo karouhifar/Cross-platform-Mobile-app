@@ -3,9 +3,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: "column",
-    backgroundColor: "orange",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: "#fff",
   },
   text: { color: "red" },
 });
