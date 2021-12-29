@@ -1,9 +1,9 @@
 import { StyleSheet } from "react-native";
+import Constants from "expo-constants";
 export const styles = StyleSheet.create({
-  container: {
+  screen: {
+    paddingTop: Constants.statusBarHeight,
+
     flex: 1,
-    flexDirection: "column",
-    backgroundColor: "#ffffff",
   },
-  text: { color: "red" },
 });
