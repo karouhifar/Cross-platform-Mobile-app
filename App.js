@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   SafeAreaView,
   StyleSheet,
@@ -7,18 +7,14 @@ import {
   StatusBar,
   FlatList,
   LogBox,
+  TextInput,
 } from "react-native";
-
-import IconView from "./app/components/IconView/IconView";
-import ListItem from "./app/components/ListItem/ListItem";
-import ScreenView from "./app/components/ScreenView/ScreenView";
-import AccountScreen from "./app/screens/AccountScreen";
-import ListingsScreen from "./app/screens/ListingsScreen";
-import MessagesScreen from "./app/screens/MessagesScreen";
-import { styles } from "./AppCss";
+import AppPicker from "./app/components/AppPicker/AppPicker";
+import AppTextInput from "./app/components/AppTextInput/AppTextInput";
+import LoginScreen from "./app/screens/LoginScreen";
 
 const App = () => {
-  return <ListingsScreen />;
+  return <LoginScreen />;
 };
 
 export default App;
