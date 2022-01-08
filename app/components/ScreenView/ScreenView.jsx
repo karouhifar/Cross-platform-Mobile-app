@@ -4,12 +4,11 @@ import { View } from "react-native-web";
 import GeneralStatusBarColor from "../GeneralStatusBarColor/GeneralStatusBarColor";
 import { styles } from "./style";
 
-export default function ScreenView({ children, style, bkColor = "#" }) {
-  StatusBar.setBarStyle("red", true);
+export default function ScreenView({ children, style, bkColor = "#000" }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
       <GeneralStatusBarColor
-        backgroundColor="#772ea2"
+        backgroundColor={bkColor}
         barStyle="light-content"
       />
       {children}
